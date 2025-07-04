@@ -18,7 +18,7 @@ targets:
     infoPlist: Sources/TellAboutIt/Info.plist
     settings:
       base:
-        DEVELOPMENT_TEAM: YOUR_TEAM_ID
+        DEVELOPMENT_TEAM: baazi
   ShareExtension:
     type: app-extension
     platform: iOS
@@ -28,6 +28,6 @@ targets:
     infoPlist: Sources/ShareExtension/Info.plist
     settings:
       base:
-        DEVELOPMENT_TEAM: YOUR_TEAM_ID
+        DEVELOPMENT_TEAM: baazi
     dependencies:
       - target: TellAboutIt

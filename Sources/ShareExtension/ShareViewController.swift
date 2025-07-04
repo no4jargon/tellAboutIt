@@ -49,7 +49,7 @@ class ShareViewController: UIViewController {
     private func captionVideo(videoData: Data, completion: @escaping (String) -> Void) {
         var request = URLRequest(url: URL(string: "https://api.twelvelabs.io/v1/caption")!)
         request.httpMethod = "POST"
-        request.setValue("Bearer YOUR_API_KEY", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer tlk_1NN4GPK25M6J9728RW6GA1S609GV", forHTTPHeaderField: "Authorization")
         request.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
         let task = URLSession.shared.uploadTask(with: request, from: videoData) { data, response, error in
             var caption = "Generated caption"
