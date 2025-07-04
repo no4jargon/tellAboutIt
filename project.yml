@@ -1,0 +1,33 @@
+name: TellAboutIt
+options:
+  bundleIdPrefix: com.example
+  developmentLanguage: en
+settings:
+  base:
+    PRODUCT_BUNDLE_IDENTIFIER: com.example.tellAboutIt
+    IPHONEOS_DEPLOYMENT_TARGET: 15.0
+    TARGETED_DEVICE_FAMILY: 1
+    SWIFT_VERSION: 5.0
+targets:
+  TellAboutIt:
+    type: application
+    platform: iOS
+    deploymentTarget: 15.0
+    sources:
+      - path: Sources/TellAboutIt
+    infoPlist: Sources/TellAboutIt/Info.plist
+    settings:
+      base:
+        DEVELOPMENT_TEAM: YOUR_TEAM_ID
+  ShareExtension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: 15.0
+    sources:
+      - path: Sources/ShareExtension
+    infoPlist: Sources/ShareExtension/Info.plist
+    settings:
+      base:
+        DEVELOPMENT_TEAM: YOUR_TEAM_ID
+    dependencies:
+      - target: TellAboutIt
